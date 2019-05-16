@@ -14,6 +14,7 @@ public class Novel{
 		BufferedReader bre = new BufferedReader(new FileReader("C:/enjoy/novel.txt"));
     	String a;
     	String b;
+    	String c;
     	while ((str = bre.readLine())!= null)
     	{
     		final int lineLength = 95;
