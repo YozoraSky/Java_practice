@@ -15,6 +15,7 @@ public class Novel{
     	String a;
     	String b;
     	String c;
+    	String test;
     	while ((str = bre.readLine())!= null)
     	{
     		final int lineLength = 95;
