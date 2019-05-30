@@ -18,6 +18,7 @@ public class Test {
 			BufferedReader reader = new BufferedReader(fr);
 			String line;
 			String sql;
+			System.out.println(Math.random());
 			DES des = new DES();
 			while (reader.ready()) {
 				line = reader.readLine();
