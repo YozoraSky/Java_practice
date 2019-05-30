@@ -8,11 +8,14 @@ import javax.crypto.spec.SecretKeySpec;
 
 public class DES {
 	public static void main(String args[]) throws Exception {
+		String UUID = java.util.UUID.randomUUID().toString();
 		String key = "4F6947A77C96DEAB";
 		String u = "csdpprd01";
 		String p = "XX3ZVwFxXX";
-		System.out.println(_DecryptByDES("Nfdkbv7bj4YHULsIsz3TVWcOycsowFMh/itA0YoJdYTcD6M0MxCuWA==",key));
-		System.out.println(_DecryptByDES("neGp4b95sTeNEZfIyuruGQ==",key));
+		String s = "INSERT INTO AAA_Test(val,RecordId) VALUES('3', newID())";
+		String ss = "";
+		System.out.println(_EncryptByDES(ss,key));
+//		System.out.println(_DecryptByDES("2h3dzVgcKua15OF+tud0BSTN9/AMfi7NrYOLVpo1A3G+ZLJOB4FMPFCRjC4Z6Zpr82C3HSrgZVs=",key));
 	}
 	public static String _EncryptByDES(String str, String key) throws Exception
 	{
