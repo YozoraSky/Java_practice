@@ -12,10 +12,10 @@ public class DES {
 		String key = "4F6947A77C96DEAB";
 		String u = "csdpprd01";
 		String p = "XX3ZVwFxXX";
-		String s = "INSERT INTO AAA_Test(val,RecordId) VALUES('3', newID())";
-		String ss = "";
-		System.out.println(_EncryptByDES(ss,key));
-//		System.out.println(_DecryptByDES("2h3dzVgcKua15OF+tud0BSTN9/AMfi7NrYOLVpo1A3G+ZLJOB4FMPFCRjC4Z6Zpr82C3HSrgZVs=",key));
+		String s = "INSERT INTO Mock_IVRDetailLog1 ([RecordId] ,[CallId] ,[ConnectionId] ,[CustomerId] ,[ANI] ,[DNIS] ,[StartTime] ,[SystemId] ,[EndFunctionId] ,[FunctionId] ,[Machine] ,[LogMessage] ,[ProcessDate]) VALUES (NEWID() ,'B2565000-DC29-2D4B-FCD9-129FC5920838' ,'00a702ddecec7b7c' ,'' ,'6601' ,'6423907' ,'2019-05-29 09:56:43.183' ,'BANK' ,'Mainflow_B','Mainflow_B' ,'172.24.34.65(scsdpcbta01)' ,'==執行Mainflow_B，手機進線(MediaType=voice)' ,getdate())";
+		String ss = _EncryptByDES(s,key);
+		System.out.println(ss);
+		System.out.println(_DecryptByDES("2h3dzVgcKubou5ktTHj5KYUcs07/EODoQx4gdsvNyNZavg4r6qmgdTgh9exfpb5P5sDEx95+K4bKvBjLSpL6clwHoiyCJrK7c4s8T/CKtd6bH5kg27+xUH8sHKDunFakDy4nK2RBlLuDgvF0YRJzccZOeazPxWjujz//8JyIDDnp4znYoBHnw6oyWDZBTuSTLiSFgnmFMysgPAFanWqQFHMIYYP5PGRHz7eTUyeY/tLh/rLXQMmJQUF19PaAtX/+0XgG2ba19TiDDVfEQ2ZPFj/HBHrHDUfKjvXbDFDrvAVAd3fXpxw/39uUkPzI//2vUOMCRcFlt+kc3Rjo1i1H4rdoKfYWbiBXNlMxFVydTnBAx3X9uwrrhSgb9tna/k/0keU0jSk3jwMvKhUbRnIVfFsxNDqnv98NHUFijoWvDRl6KoPqz1aKvJziphHE9gmP91cXBXdIU1T2SsH8MH/dcGLFGciqP01f09cJxxdp01lS/mliSjAut+A0dEtlfmg8kpbGwlPcJMQ4ix9KuJ6Z8P6Ln33Whrw+u3dprjeBOzY1ugBlvQaenvJ8nsXh8V6j6ZHvBbY0aZPY9Gxl0VfQo7QoZ1+9QWuVhEqMEK02YKLLCEGQ6n5uMwfbvExkx4sRbcINB5WdimY=",key));
 	}
 	public static String _EncryptByDES(String str, String key) throws Exception
 	{
